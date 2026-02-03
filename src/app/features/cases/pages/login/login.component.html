@@ -1,0 +1,20 @@
+<p>login works!</p>
+
+@if(loginModal){
+    <div class="modal">
+    <h2>Microsoft Login Required</h2>
+
+    <p>Use the following code:</p>
+
+    <div class="code-box">
+      {{ generatedCode }}
+    </div>
+    <p>This code expires at:</p>
+    <small>{{ expirationDate }}</small>
+    </div>
+
+}
+ @if(!auth){<div>
+    <button (click)="ButtonClick()">Login</button>
+  </div>
+ }
